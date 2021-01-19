@@ -7,7 +7,7 @@ class Screen extends React.Component {
       super(props);
       this.state = {
         input: '',
-        submit: ''
+        submit: ' '
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,7 +23,14 @@ class Screen extends React.Component {
         submit: this.state.input
       });
     }
-    
+
+    result(){
+        try {
+            return eval(this.state.submit)
+        } catch(e) {
+            return "ERROR"
+        }
+    }
 
     render() {
       return (
@@ -34,10 +41,10 @@ class Screen extends React.Component {
               onChange={this.handleChange} />
             <button type='submit'>=</button>
           </form>
-          <h1>{eval(this.state.submit)}</h1>
-          {/* <h1>Your answer is</h1> */}
+          <h1>{this.result()}</h1>
         </div>
       );
     }
   };
+  
   export default Screen;
