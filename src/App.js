@@ -1,10 +1,10 @@
 import './App.css';
-import Button from './components/button/button';
+import Screen from './components/screen/screen';
 
 function App() {
   return (
     <div className="App">
-      <Button buttonName={1} />
+      <Screen />
     </div>
   );
 }
