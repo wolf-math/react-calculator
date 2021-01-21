@@ -4,14 +4,12 @@ import './button.scss';
 
 const Button = (props) => {
   
-  let clickValue = () => {
-    this.setState({
-      input: props.buttonName
-    });
+  let handleClick = () => {
+    console.log(props.buttonName)
   }
 
   return (
-    <div className="button" onClick={clickValue}>
+    <div className="button" onClick={handleClick}>
       <h1>{props.buttonName}</h1>
     </div>
   )

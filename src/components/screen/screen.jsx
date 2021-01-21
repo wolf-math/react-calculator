@@ -9,7 +9,7 @@ class Screen extends React.Component {
       super(props);
       this.state = {
         input: '',
-        submit: ' '
+        submit: '0'
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
