@@ -12,6 +12,9 @@ const Numpad = (props) => {
             <Button buttonName="/" />
             <Button buttonName="+" />
             <Button buttonName="-" />
+            <Button buttonName="**" />
+            <Button buttonName="%" />
+            
         </div>
         <br></br>
         <div className="numbers">
