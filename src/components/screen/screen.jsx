@@ -2,8 +2,6 @@ import React from 'react';
 
 import './screen.scss';
 
-import Numpad from '../numpad/numpad'
-
 class Screen extends React.Component {
     constructor(props) {
       super(props);
@@ -11,15 +9,15 @@ class Screen extends React.Component {
         input: '',
         submit: '0'
       };
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
     }
-    handleChange(event) {
+
+    handleChange = (event) => {
       this.setState({
         input: event.target.value
       });
     }
-    handleSubmit(event) {
+
+    handleSubmit = (event) => {
       event.preventDefault()
       this.setState({
         submit: this.state.input
@@ -44,8 +42,6 @@ class Screen extends React.Component {
             <button type='submit'>=</button>
           </form>
           <h1>{this.result()}</h1>
-
-          <Numpad />
         </div>
       );
     }
