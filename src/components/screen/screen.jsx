@@ -24,7 +24,7 @@ class Screen extends React.Component {
       });
     }
 
-    result(){
+    result = () => {
         try {
             return eval(this.state.submit)
         } catch(e) {
@@ -33,18 +33,18 @@ class Screen extends React.Component {
     }
 
     render() {
-      return (
-        <div>
-          <form onSubmit={this.handleSubmit}>
-            <input
-              value={this.state.input}
-              onChange={this.handleChange} />
-            <button type='submit'>=</button>
-          </form>
-          <h1>{this.result()}</h1>
-        </div>
-      );
+        return (
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                    <input
+                        value={this.state.input}
+                        onChange={this.handleChange} />
+                    <button type='submit'>=</button>
+                </form>
+                <h1>{this.result()}</h1>
+            </div>
+        );
     }
-  };
+};
   
-  export default Screen;
+export default Screen;
