@@ -15,8 +15,9 @@ class App extends React.Component {
   }
 
   handleChange = (event) => {
+    console.log(event)
     this.setState({
-      // input: event.target.value
+      input: event.target.value
     });
   }
 
@@ -38,8 +39,13 @@ class App extends React.Component {
   render() {
       return (
         <div>
-          <Screen onChange={this.handleChange()} onSubmit={this.handleSubmit()} />
-          <Numpad onChange={this.handleChange()}/>
+          <Screen
+            input={this.state.input}
+            result={this.result}
+            onChange={this.handleChange}
+            onSubmit={this.handleSubmit}
+          />
+          <Numpad onChange={this.handleChange} />
         </div>
       );
   }

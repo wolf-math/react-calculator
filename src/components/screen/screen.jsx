@@ -48,14 +48,15 @@ import './screen.scss';
 //     }
 // };
 
-const Screen = (props) => {
+const Screen = ({handleSubmit, handleChange, input, result, ...rest}) => {
+    console.log(input)
     return (
         <div>
-            <form onSubmit={this.handleSubmit}>
-                <input value={this.state.input} onChange={this.handleChange} />
+            <form onSubmit={handleSubmit}>
+                <input type="text" onKeyPress={console.log} />
                 <button type='submit'>=</button>
             </form>
-            <h1>{this.result()}</h1>
+            <h1>{result()}</h1>
         </div>
     )
 }
